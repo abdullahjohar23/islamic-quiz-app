@@ -21,18 +21,20 @@ class _HomePageState extends State<HomePage> {
                     children: [
                         // Header with profile & points
                         Padding(
-                            padding: const EdgeInsets.all(12.0),
+                            padding: EdgeInsets.symmetric(horizontal: deviceWidth*0.04),
+                            
                             child: Row(
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                
                                 children: [
                                     Row(
                                         children: [
-                                            const CircleAvatar(
+                                            CircleAvatar(
                                                 backgroundColor: Color(0xFFFF8A65),
-                                                child: Icon(Icons.person, color: Colors.white),
+                                                child: Icon(Icons.person, color: Colors.white, size: deviceWidth*0.08),
                                             ),
                                             
-                                            const SizedBox(width: 8),
+                                            SizedBox(width: deviceWidth*0.03),
                                             
                                             const Text(
                                                 'Abdullah Johar',
@@ -45,11 +47,11 @@ class _HomePageState extends State<HomePage> {
                                         children: [
                                             Image.asset(
                                                 'assets/images/badges/amethyst.png',
-                                                height: 25,
+                                                height: deviceWidth*0.07,
                                             ),
 
-                                            const SizedBox(width: 5),
-                                            const Text('120', style: TextStyle(fontSize: 20)),
+                                            SizedBox(width: deviceWidth*0.01),
+                                            const Text('120', style: TextStyle(fontSize: 20, color: Color.fromARGB(255, 114, 35, 163), fontWeight: FontWeight.bold)),
                                         ],
                                     ),
                                 ],
@@ -58,13 +60,13 @@ class _HomePageState extends State<HomePage> {
 
                         // Search Bar
                         Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 8.0),
+                            padding: EdgeInsets.symmetric(horizontal: deviceWidth*0.04, vertical: deviceWidth*0.05),
                             child: TextField(
                                 decoration: InputDecoration(
                                     hintText: "Search Quiz",
-                                    prefixIcon: const Icon(Icons.search),
+                                    prefixIcon: Icon(Icons.search, size: deviceWidth*0.06),
                                     border: OutlineInputBorder(
-                                        borderRadius: BorderRadius.circular(12),
+                                        borderRadius: BorderRadius.circular(12.0),
                                     ),
                                 ),
                             ),
@@ -73,11 +75,11 @@ class _HomePageState extends State<HomePage> {
                         // Quiz Categories Grid
                         Expanded(
                             child: GridView.builder(
-                                padding: const EdgeInsets.all(12),
-                                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                                padding: EdgeInsets.all(deviceWidth*0.04),
+                                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                                     crossAxisCount: 2,
-                                    crossAxisSpacing: 12,
-                                    mainAxisSpacing: 12,
+                                    crossAxisSpacing: deviceWidth*0.025,
+                                    mainAxisSpacing: deviceWidth*0.025,
                                 ),
 
                                 itemCount: 12, // Later dynamic
@@ -91,7 +93,7 @@ class _HomePageState extends State<HomePage> {
                                         child: Center(
                                             child: Text(
                                                 "Category ${index + 1}",
-                                                style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+                                                style: const TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.w500),
                                             ),
                                         ),
                                     );
