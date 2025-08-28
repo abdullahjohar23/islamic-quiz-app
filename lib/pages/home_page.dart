@@ -30,7 +30,7 @@ class _HomePageState extends State<HomePage> {
                                     Row(
                                         children: [
                                             CircleAvatar(
-                                                backgroundColor: Color(0xFFFF8A65),
+                                                backgroundColor: Color(0xFF675496),
                                                 child: Icon(Icons.person, color: Colors.white, size: deviceWidth*0.08),
                                             ),
                                             
@@ -77,7 +77,7 @@ class _HomePageState extends State<HomePage> {
                             child: GridView.builder(
                                 padding: EdgeInsets.all(deviceWidth*0.04),
                                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                                    crossAxisCount: 2,
+                                    crossAxisCount: 3,
                                     crossAxisSpacing: deviceWidth*0.025,
                                     mainAxisSpacing: deviceWidth*0.025,
                                 ),
@@ -86,7 +86,7 @@ class _HomePageState extends State<HomePage> {
                                 itemBuilder: (context, index) {
                                     return Container(
                                         decoration: BoxDecoration(
-                                            color: Color(0xFFFF8A65),
+                                            color: Color(0xFF675496),
                                             borderRadius: BorderRadius.circular(12),
                                         ),
                                         
