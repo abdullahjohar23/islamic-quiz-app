@@ -12,8 +12,8 @@ class _HomePageState extends State<HomePage> {
 
     @override
     Widget build(BuildContext context) {
-        deviceHeight = MediaQuery.of(context).size.height;
         deviceWidth = MediaQuery.of(context).size.width;
+        deviceHeight = MediaQuery.of(context).size.height;
         
         return Scaffold(
             body: SafeArea(
@@ -60,40 +60,42 @@ class _HomePageState extends State<HomePage> {
                         Padding(
                             padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 8.0),
                             child: TextField(
-                            decoration: InputDecoration(
-                                hintText: "Search Quiz",
-                                prefixIcon: const Icon(Icons.search),
-                                border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(12),
+                                decoration: InputDecoration(
+                                    hintText: "Search Quiz",
+                                    prefixIcon: const Icon(Icons.search),
+                                    border: OutlineInputBorder(
+                                        borderRadius: BorderRadius.circular(12),
+                                    ),
                                 ),
-                            ),
                             ),
                         ),
 
                         // Quiz Categories Grid
                         Expanded(
                             child: GridView.builder(
-                            padding: const EdgeInsets.all(12),
-                            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                                crossAxisCount: 2,
-                                crossAxisSpacing: 12,
-                                mainAxisSpacing: 12,
-                            ),
-                            itemCount: 12, // Later dynamic
-                            itemBuilder: (context, index) {
-                                return Container(
-                                decoration: BoxDecoration(
-                                    color: Color(0xFFFF8A65),
-                                    borderRadius: BorderRadius.circular(12),
+                                padding: const EdgeInsets.all(12),
+                                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                                    crossAxisCount: 2,
+                                    crossAxisSpacing: 12,
+                                    mainAxisSpacing: 12,
                                 ),
-                                child: Center(
-                                    child: Text(
-                                    "Category ${index + 1}",
-                                    style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
-                                    ),
-                                ),
-                                );
-                            },
+
+                                itemCount: 12, // Later dynamic
+                                itemBuilder: (context, index) {
+                                    return Container(
+                                        decoration: BoxDecoration(
+                                            color: Color(0xFFFF8A65),
+                                            borderRadius: BorderRadius.circular(12),
+                                        ),
+                                        
+                                        child: Center(
+                                            child: Text(
+                                                "Category ${index + 1}",
+                                                style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+                                            ),
+                                        ),
+                                    );
+                                },
                             ),
                         ),
                     ],
