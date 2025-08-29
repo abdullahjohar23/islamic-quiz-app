@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:islamic_quiz_app/pages/quiz_category_page.dart';
 
 class HomePage extends StatefulWidget {
     const HomePage({super.key});
@@ -82,18 +83,28 @@ class _HomePageState extends State<HomePage> {
                                     mainAxisSpacing: deviceWidth*0.025,
                                 ),
 
-                                itemCount: 12, // Later dynamic
+                                itemCount: categories.length,
                                 itemBuilder: (context, index) {
-                                    return Container(
-                                        decoration: BoxDecoration(
-                                            color: Color(0xFF675496),
-                                            borderRadius: BorderRadius.circular(12),
-                                        ),
-                                        
-                                        child: Center(
-                                            child: Text(
-                                                "Category ${index + 1}",
-                                                style: const TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.w500),
+                                    final categoryAccess = categories[index];
+
+                                    return GestureDetector(
+                                        onTap: () {
+                                            // navigate to the page later
+                                        },
+
+                                        child: Container(
+                                            padding: EdgeInsets.all(5),
+                                            decoration: BoxDecoration(
+                                                color: Color(0xFF675496),
+                                                borderRadius: BorderRadius.circular(12),
+                                            ),
+                                            
+                                            child: Center(
+                                                child: Text(
+                                                    categoryAccess.name,
+                                                    style: const TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.w500),
+                                                    textAlign: TextAlign.center,
+                                                ),
                                             ),
                                         ),
                                     );
