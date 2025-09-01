@@ -28,7 +28,7 @@ class QuizCard extends StatelessWidget {
                 child: Container( // overlay to make text readable
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(12),
-                        color: const Color.fromARGB(255, 176, 120, 211).withAlpha(89),
+                        color: const Color.fromARGB(89, 0, 0, 0),
                     ),
 
                     child: Center(
