@@ -36,3 +36,7 @@ flutter:
         - family: Lora
           fonts:
               - asset: assets/fonts/Lora/Lora-VariableFont_wght.ttf
+        
+        - family: Archivo_Black
+          fonts:
+              - asset: assets/fonts/Archivo_Black/ArchivoBlack-Regular.ttf
