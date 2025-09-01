@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:islamic_quiz_app/pages/quiz_card_design.dart';
 import 'package:islamic_quiz_app/pages/quiz_category_page.dart';
 
 class HomePage extends StatefulWidget {
@@ -76,37 +77,24 @@ class _HomePageState extends State<HomePage> {
                         // Quiz Categories Grid
                         Expanded(
                             child: GridView.builder(
-                                padding: EdgeInsets.all(deviceWidth*0.04),
+                                padding: EdgeInsets.all(deviceWidth * 0.04),
+                                
                                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                                     crossAxisCount: 3,
-                                    crossAxisSpacing: deviceWidth*0.025,
-                                    mainAxisSpacing: deviceWidth*0.025,
+                                    crossAxisSpacing: deviceWidth * 0.025,
+                                    mainAxisSpacing: deviceWidth * 0.025,
                                 ),
-
+                                
                                 itemCount: categories.length,
                                 itemBuilder: (context, index) {
-                                    final categoryAccess = categories[index];
+                                    final category = categories[index];
 
-                                    return GestureDetector(
+                                    return QuizCard(
+                                        title: category.name,
+                                        imagePath: category.imagePath,
                                         onTap: () {
-                                            // navigate to the page later
+                                            // navigate to quiz page later
                                         },
-
-                                        child: Container(
-                                            padding: EdgeInsets.all(5),
-                                            decoration: BoxDecoration(
-                                                color: Color(0xFF675496),
-                                                borderRadius: BorderRadius.circular(12),
-                                            ),
-                                            
-                                            child: Center(
-                                                child: Text(
-                                                    categoryAccess.name,
-                                                    style: const TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.w500),
-                                                    textAlign: TextAlign.center,
-                                                ),
-                                            ),
-                                        ),
                                     );
                                 },
                             ),
