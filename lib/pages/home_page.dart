@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:islamic_quiz_app/pages/quiz_card_design.dart';
-import 'package:islamic_quiz_app/pages/quiz_category_page.dart';
+import 'package:islamic_quiz_app/pages/quiz_category_list.dart';
 
 class HomePage extends StatefulWidget {
     const HomePage({super.key});
