@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class QuizCard extends StatelessWidget {
+class QuizCard extends StatefulWidget {
     final String title;
     final String imagePath;
     final VoidCallback onTap;
@@ -12,15 +12,25 @@ class QuizCard extends StatelessWidget {
         required this.onTap,
     });
 
+  @override
+  State<QuizCard> createState() => _QuizCardState();
+}
+
+class _QuizCardState extends State<QuizCard> {
+    late double deviceHeight, deviceWidth;
+
     @override
     Widget build(BuildContext context) {
+        deviceWidth = MediaQuery.of(context).size.width;
+        deviceHeight = MediaQuery.of(context).size.height;
+
         return GestureDetector(
-            onTap: onTap,
+            onTap: widget.onTap,
             child: Container(
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(12),
                     image: DecorationImage(
-                        image: AssetImage(imagePath),
+                        image: AssetImage(widget.imagePath),
                         fit: BoxFit.cover,
                     ),
                 ),
@@ -38,11 +48,11 @@ class QuizCard extends StatelessWidget {
                                 children: [
                                     // Border text
                                     Text(
-                                        title,
+                                        widget.title,
                                         textAlign: TextAlign.center,
                                         style: TextStyle(
                                             fontFamily: 'Archivo_Black',
-                                            fontSize: 15,
+                                            fontSize: deviceWidth*0.035,
                                             fontWeight: FontWeight.w600,
                                             foreground: Paint()
                                             ..style = PaintingStyle.stroke
@@ -53,11 +63,11 @@ class QuizCard extends StatelessWidget {
                                     
                                     // White fill text
                                     Text(
-                                        title,
+                                        widget.title,
                                         textAlign: TextAlign.center,
                                         style: TextStyle(
                                             fontFamily: 'Archivo_Black',
-                                            fontSize: 15,
+                                            fontSize: deviceWidth*0.035,
                                             fontWeight: FontWeight.w600,
                                             color: Colors.black,
                                         ),
