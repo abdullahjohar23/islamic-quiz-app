@@ -1,23 +1,140 @@
 import 'package:flutter/material.dart';
 
-class ProfilePage extends StatefulWidget {
+class ProfilePage extends StatelessWidget {
     const ProfilePage({super.key});
 
     @override
-    State<ProfilePage> createState() => _ProfilePageState();
-}
-
-class _ProfilePageState extends State<ProfilePage> {
-    @override
     Widget build(BuildContext context) {
+        double deviceWidth = MediaQuery.of(context).size.width;
+        double deviceHeight = MediaQuery.of(context).size.height;
+
         return Scaffold(
-            body: Center(
-                child: Text(
-                    'This is the Profile Page',
-                    style: TextStyle(
-                        fontSize: 25,
-                        color: Colors.deepPurple,
-                    ),
+            backgroundColor: Colors.white,
+            
+            body: SafeArea(
+                child: Column(
+                    children: [
+                        // Top Orange Card
+                        Container(
+                            width: double.infinity,
+                            padding: EdgeInsets.symmetric(
+                                vertical: deviceHeight * 0.04,
+                                horizontal: deviceWidth * 0.06,
+                            ),
+                            
+                            decoration: BoxDecoration(
+                                color: Color(0xFF675496),
+                                borderRadius: const BorderRadius.only(
+                                    bottomLeft: Radius.circular(30),
+                                    bottomRight: Radius.circular(30),
+                                ),
+                            ),
+                            
+                            child: Column(
+                                children: [
+                                // Avatar
+                                const CircleAvatar(
+                                    radius: 30,
+                                    backgroundColor: Colors.white,
+                                    child: Icon(Icons.person, size: 40, color: Colors.grey),
+                                ),
+                                const SizedBox(height: 10),
+
+                                // Name
+                                const Text(
+                                    "ABDULLAH",
+                                    style: TextStyle(
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white,
+                                    ),
+                                ),
+                                const SizedBox(height: 15),
+
+                                // Rank, Badge, Score Row
+                                Row(
+                                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                    children: [
+                                    Column(
+                                        children: const [
+                                        Text(
+                                            "#75",
+                                            style: TextStyle(
+                                                fontSize: 18, fontWeight: FontWeight.bold),
+                                        ),
+                                        Text("WORLD\nRANK",
+                                            textAlign: TextAlign.center,
+                                            style: TextStyle(fontSize: 12)),
+                                        ],
+                                    ),
+                                    Column(
+                                        children: [
+                                            Image.asset(
+                                                            'assets/images/badges/amethyst.png',
+                                                            height: deviceWidth*0.07,
+                                                        ),
+                                        Text("Amethyst",
+                                            style: TextStyle(
+                                                fontSize: 14, fontWeight: FontWeight.w600)),
+                                        ],
+                                    ),
+                                    Column(
+                                        children: const [
+                                        Text(
+                                            "120",
+                                            style: TextStyle(
+                                                fontSize: 18, fontWeight: FontWeight.bold),
+                                        ),
+                                        Text("SCORE",
+                                            style: TextStyle(
+                                                fontSize: 12,
+                                            )),
+                                        ],
+                                    ),
+                                    ],
+                                ),
+                                ],
+                            ),
+                        ),
+
+                        const SizedBox(height: 30),
+
+                        // Info Boxes
+                        Padding(
+                        padding: EdgeInsets.symmetric(horizontal: deviceWidth * 0.08),
+                        child: Column(
+                            children: [
+                            Container(
+                                padding:
+                                    const EdgeInsets.symmetric(horizontal: 15, vertical: 12),
+                                margin: const EdgeInsets.only(bottom: 15),
+                                decoration: BoxDecoration(
+                                border: Border.all(color: Colors.black54),
+                                borderRadius: BorderRadius.circular(10),
+                                ),
+                                child: const Text(
+                                "Name: ABDULLAH Johar",
+                                style:
+                                    TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+                                ),
+                            ),
+                            Container(
+                                padding:
+                                    const EdgeInsets.symmetric(horizontal: 15, vertical: 12),
+                                decoration: BoxDecoration(
+                                border: Border.all(color: Colors.black54),
+                                borderRadius: BorderRadius.circular(10),
+                                ),
+                                child: const Text(
+                                "Age: 26",
+                                style:
+                                    TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+                                ),
+                            ),
+                            ],
+                        ),
+                        ),
+                    ],
                 ),
             ),
         );
