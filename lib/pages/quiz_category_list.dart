@@ -13,9 +13,9 @@ final List<Category> categories = [
     Category("Companions", "assets/images/quizbg/companionsbg.jpg"),
     Category("Women in Islam", "assets/images/quizbg/womenbg.jpg"),
     Category("Fiqh", "assets/images/quizbg/fiqhbg.png"),
-    Category("Aqeeda", "assets/images/quizbg/quranbg.png"),
+    Category("Aqeeda", "assets/images/quizbg/aqeedahbg.jpg"),
     Category("Battles", "assets/images/quizbg/battlebg.jpg"),
-    Category("Qiyamah", "assets/images/quizbg/quranbg.png"),
+    Category("Qiyamah", "assets/images/quizbg/qiyamahbg.jpg"),
     Category("Jahannum", "assets/images/quizbg/jahannumbg.jpg"),
     Category("Jannah", "assets/images/quizbg/jannahbg.jpg"),
 ];
