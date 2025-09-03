@@ -33,7 +33,7 @@ class _HomePageState extends State<HomePage> {
                         padding: EdgeInsets.only(
                             left: deviceWidth*0.04,
                             right: deviceWidth*0.04,
-                            top: topPadding + 10
+                            top: topPadding + 20,
                         ),
                         
                         child: Row(
