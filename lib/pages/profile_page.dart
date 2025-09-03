@@ -17,15 +17,13 @@ class ProfilePage extends StatelessWidget {
                         // Top Purple Card
                         Container(
                             width: deviceWidth,
-                            height: deviceHeight*0.4,
 
                             padding: EdgeInsets.symmetric(
-                                vertical: deviceHeight * 0.09,
+                                vertical: deviceHeight * 0.08,
                                 horizontal: deviceWidth * 0.01,
                             ),
                             
                             decoration: BoxDecoration(
-                                // color: Color(0xFF675496),
                                 gradient: LinearGradient(
                                     colors: [
                                         Color(0xFF2D0A57), // very dark purple
@@ -59,11 +57,11 @@ class ProfilePage extends StatelessWidget {
                                     SizedBox(height: deviceHeight*0.03),
 
                                     // Name
-                                    const Text(
+                                    Text(
                                         'ABDULLAH JOHAR',
                                         style: TextStyle(
                                             color: Colors.white,
-                                            fontSize: 20,
+                                            fontSize: deviceWidth*0.047,
                                             fontWeight: FontWeight.bold,
                                         ),
                                     ),
@@ -80,18 +78,18 @@ class ProfilePage extends StatelessWidget {
                                                         '#75',
                                                         style: TextStyle(
                                                             color: Colors.white,
-                                                            fontSize: 18,
+                                                            fontSize: deviceWidth*0.04,
                                                             fontWeight: FontWeight.bold
                                                         ),
                                                     ),
 
-                                                    Image.asset('assets/images/badges/amethyst.png',height: deviceWidth*0.07),
+                                                    Image.asset('assets/images/badges/amethyst.png', height: deviceWidth*0.07),
 
                                                     Text(
                                                         '120',
                                                         style: TextStyle(
                                                             color: Colors.white,
-                                                            fontSize: 18,
+                                                            fontSize: deviceWidth*0.04,
                                                             fontWeight: FontWeight.bold
                                                         ),
                                                     ),
@@ -106,7 +104,7 @@ class ProfilePage extends StatelessWidget {
                                                         textAlign: TextAlign.center,
                                                         style: TextStyle(
                                                             color: Colors.white,
-                                                            fontSize: 14,
+                                                            fontSize: deviceWidth*0.035,
                                                             fontWeight: FontWeight.w400,
                                                         ),
                                                     ),
@@ -115,7 +113,7 @@ class ProfilePage extends StatelessWidget {
                                                         'Amethyst',
                                                         style: TextStyle(
                                                             color: Colors.white,
-                                                            fontSize: 14,
+                                                            fontSize: deviceWidth*0.035,
                                                             fontWeight: FontWeight.w400,
                                                         ),
                                                     ),
@@ -124,7 +122,7 @@ class ProfilePage extends StatelessWidget {
                                                         'SCORE',
                                                         style: TextStyle(
                                                             color: Colors.white,
-                                                            fontSize: 14,
+                                                            fontSize: deviceWidth*0.035,
                                                             fontWeight: FontWeight.w400,
                                                         ),
                                                     ),
