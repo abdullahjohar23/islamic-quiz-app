@@ -54,12 +54,11 @@ class ProfilePage extends StatelessWidget {
 
                                     const SizedBox(height: 15),
 
-                                    // Rank, Badge, Score Row
-                                    Row(
-                                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                    Column(
                                         children: [
-                                            Column(
-                                                children: const [
+                                            Row(
+                                                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                                children: [
                                                     Text(
                                                         '#75',
                                                         style: TextStyle(
@@ -69,35 +68,8 @@ class ProfilePage extends StatelessWidget {
                                                         ),
                                                     ),
 
-                                                    Text(
-                                                        'WORLD\nRANK',
-                                                        textAlign: TextAlign.center,
-                                                        style: TextStyle(
-                                                            color: Colors.white,
-                                                            fontSize: 14,
-                                                            fontWeight: FontWeight.w400,
-                                                        ),
-                                                    ),
-                                                ],
-                                            ),
-
-                                            Column(
-                                                children: [
                                                     Image.asset('assets/images/badges/amethyst.png',height: deviceWidth*0.07),
-                                                    
-                                                    Text(
-                                                        'Amethyst',
-                                                        style: TextStyle(
-                                                            color: Colors.white,
-                                                            fontSize: 14,
-                                                            fontWeight: FontWeight.w400,
-                                                        ),
-                                                    ),
-                                                ],
-                                            ),
 
-                                            Column(
-                                                children: const [
                                                     Text(
                                                         '120',
                                                         style: TextStyle(
@@ -106,6 +78,31 @@ class ProfilePage extends StatelessWidget {
                                                             fontWeight: FontWeight.bold
                                                         ),
                                                     ),
+                                                ],
+                                            ),
+                                            
+                                            Row(
+                                                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                                children: [
+                                                    Text(
+                                                        'Position',
+                                                        textAlign: TextAlign.center,
+                                                        style: TextStyle(
+                                                            color: Colors.white,
+                                                            fontSize: 14,
+                                                            fontWeight: FontWeight.w400,
+                                                        ),
+                                                    ),
+
+                                                    Text(
+                                                        'Amethyst',
+                                                        style: TextStyle(
+                                                            color: Colors.white,
+                                                            fontSize: 14,
+                                                            fontWeight: FontWeight.w400,
+                                                        ),
+                                                    ),
+
                                                     Text(
                                                         'SCORE',
                                                         style: TextStyle(
