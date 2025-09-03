@@ -17,14 +17,25 @@ class ProfilePage extends StatelessWidget {
                         // Top Purple Card
                         Container(
                             width: deviceWidth,
+                            height: deviceHeight*0.4,
 
                             padding: EdgeInsets.symmetric(
                                 vertical: deviceHeight * 0.09,
-                                horizontal: deviceWidth * 0.06,
+                                horizontal: deviceWidth * 0.01,
                             ),
                             
                             decoration: BoxDecoration(
-                                color: Color(0xFF675496),
+                                // color: Color(0xFF675496),
+                                gradient: LinearGradient(
+                                    colors: [
+                                        Color(0xFF2D0A57), // very dark purple
+                                        Color(0xFF675496), // base purple
+                                        Color(0xFFE0A8FF), // bright lavender
+                                    ], 
+
+                                    begin: Alignment.topLeft,
+                                    end: Alignment.bottomRight,
+                                ),
                                 borderRadius: const BorderRadius.only(
                                     bottomLeft: Radius.circular(40),
                                     bottomRight: Radius.circular(40),
@@ -34,26 +45,31 @@ class ProfilePage extends StatelessWidget {
                             child: Column(
                                 children: [
                                     // Avatar
-                                    const CircleAvatar(
-                                        radius: 30,
+                                    CircleAvatar(
                                         backgroundColor: Colors.white,
-                                        child: Icon(Icons.person, size: 40, color: Color(0xFF675496)),
+                                        radius: 30,
+                                        child: Icon(
+                                            Icons.person,
+                                            size: deviceWidth*0.12,
+                                            color: Color(0xFF675496),
+                                        ),
                                     ),
                                     
-                                    const SizedBox(height: 10),
+                                    SizedBox(height: deviceHeight*0.03),
 
                                     // Name
                                     const Text(
                                         'ABDULLAH JOHAR',
                                         style: TextStyle(
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.white,
+                                            color: Colors.white,
+                                            fontSize: 20,
+                                            fontWeight: FontWeight.bold,
                                         ),
                                     ),
 
-                                    const SizedBox(height: 15),
+                                    SizedBox(height: deviceHeight*0.03),
 
+                                    // Position, Badge and Score
                                     Column(
                                         children: [
                                             Row(
@@ -119,7 +135,7 @@ class ProfilePage extends StatelessWidget {
                             ),
                         ),
 
-                        const SizedBox(height: 30),
+                        SizedBox(height: deviceHeight*0.05),
 
                         // Info Boxes
                         Padding(
