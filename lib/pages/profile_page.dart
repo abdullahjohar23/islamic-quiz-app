@@ -30,6 +30,7 @@ class ProfilePage extends StatelessWidget {
                                     colors: [
                                         Color(0xFF2D0A57), // very dark purple
                                         Color(0xFF675496), // base purple
+                                        Color(0xFF675496), // base purple
                                         Color(0xFFE0A8FF), // bright lavender
                                     ], 
 
