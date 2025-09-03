@@ -1,21 +1,47 @@
 class Category {
-    final String name;
-    final String imagePath;
+    final String name, imagePath;
 
     Category(this.name, this.imagePath);
 }
 
-final List<Category> categories = [
-    Category("Names of Allah", "assets/images/quizbg/Allahbg.jpg"),
-    Category("Qur'an", "assets/images/quizbg/quranbg.jpg"),
-    Category("Seerah", "assets/images/quizbg/prophetmuhammadbg.jpg"),
-    Category("Prophets", "assets/images/quizbg/prophetsbg.jpg"),
-    Category("Companions", "assets/images/quizbg/companionsbg.jpg"),
-    Category("Women in Islam", "assets/images/quizbg/womenbg.jpg"),
-    Category("Fiqh", "assets/images/quizbg/fiqhbg.png"),
-    Category("Aqeeda", "assets/images/quizbg/aqeedahbg.jpg"),
-    Category("Battles", "assets/images/quizbg/battlebg.jpg"),
-    Category("Qiyamah", "assets/images/quizbg/qiyamahbg.jpg"),
-    Category("Jahannum", "assets/images/quizbg/jahannumbg.jpg"),
-    Category("Jannah", "assets/images/quizbg/jannahbg.jpg"),
+const String quizBgPath = "assets/images/quizbg/";
+
+final List<List<String>> categoryData = [
+    ["Names of Allah", "Allahbg.jpg"],
+    ["Qur'an", "quranbg.jpg"],
+    ["Seerah", "prophetmuhammadbg.jpg"],
+    ["Prophets", "prophetsbg.jpg"],
+    ["Companions", "companionsbg.jpg"],
+    ["Women in Islam", "womenbg.jpg"],
+    ["Fiqh", "fiqhbg.png"],
+    ["Aqeeda", "aqeedahbg.jpg"],
+    ["Battles", "battlebg.jpg"],
+    ["Qiyamah", "qiyamahbg.jpg"],
+    ["Jahannum", "jahannumbg.jpg"],
+    ["Jannah", "jannahbg.jpg"],
 ];
+
+final List<Category> categories = categoryData.map((data) => Category(data[0], '$quizBgPath${data[1]}')).toList();
+
+/*
+
+//* In case you wanna use Map *//
+
+final Map<String, String> categoryMap = {
+    "Names of Allah": "Allahbg.jpg",
+    "Qur'an": "quranbg.jpg",
+    "Seerah": "prophetmuhammadbg.jpg",
+    "Prophets": "prophetsbg.jpg",
+    "Companions": "companionsbg.jpg",
+    "Women in Islam": "womenbg.jpg",
+    "Fiqh": "fiqhbg.png",
+    "Aqeeda": "aqeedahbg.jpg",
+    "Battles": "battlebg.jpg",
+    "Qiyamah": "qiyamahbg.jpg",
+    "Jahannum": "jahannumbg.jpg",
+    "Jannah": "jannahbg.jpg",
+};
+
+final List<Category> categories = categoryMap.entries.map((entry) => Category(entry.key, "assets/images/quizbg/${entry.value}")).toList();
+
+*/
