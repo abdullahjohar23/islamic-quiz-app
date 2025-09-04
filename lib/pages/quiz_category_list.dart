@@ -13,7 +13,6 @@ final List<List<String>> categoryData = [
     ["Prophets", "prophetsbg.jpg"],
     ["Companions", "companionsbg.jpg"],
     ["Women in Islam", "womenbg.jpg"],
-    ["Fiqh", "fiqhbg.jpg"],
     ["Aqeeda", "aqeedahbg.jpg"],
     ["Salah", "salahbg.jpg"],
     ["Sawm", "sawmbg.jpg"],
