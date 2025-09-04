@@ -40,7 +40,7 @@ class _ProfilePageState extends State<ProfilePage> {
             body: SafeArea(
                 child: Column(
                     children: [
-                        // Top Purple Gradient Card
+                        //* Top Purple Gradient Card
                         Container(
                             width: deviceWidth,
 
@@ -85,7 +85,7 @@ class _ProfilePageState extends State<ProfilePage> {
 
                                     // Name
                                     Text(
-                                        'ABDULLAH JOHAR',
+                                        userName.toUpperCase(),
                                         style: TextStyle(
                                             color: Colors.white,
                                             fontSize: deviceWidth*0.047,
@@ -164,8 +164,79 @@ class _ProfilePageState extends State<ProfilePage> {
 
                         SizedBox(height: deviceHeight*0.05),
 
-                        // Lower Profile Section
-                        
+                        //* Lower Profile Section
+
+                        // Edit Name Field
+                        Padding(
+                            padding: EdgeInsets.symmetric(horizontal: deviceWidth * 0.05),
+
+                            child: Row(
+                                children: [
+                                    Expanded(
+                                        child: TextField(
+                                            controller: _nameController,
+                                            style: TextStyle(
+                                                fontSize: deviceWidth*0.05,
+                                                color: Colors.grey,
+                                            ),
+                                            
+                                            decoration: InputDecoration(
+                                                labelText: 'Name',
+                                                labelStyle: TextStyle(
+                                                    color: Color(0xFF2D0A57),
+                                                    fontSize: deviceWidth*0.06,
+                                                ),
+
+                                                border: OutlineInputBorder(
+                                                    borderRadius: BorderRadius.circular(12),
+                                                ),
+                                            ),
+                                        ),
+                                    ),
+
+                                    SizedBox(width: 8), // gap between TextField and the Save Button
+
+                                    ElevatedButton(
+                                        onPressed: () {
+                                            setState(() {
+                                                userName = _nameController.text;
+                                            });
+                                        },
+
+                                        style: ElevatedButton.styleFrom(
+                                            backgroundColor: Color(0xFF675496), // Background color
+                                            foregroundColor: Colors.white, // Text color
+                                            padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+                                            
+                                            textStyle: const TextStyle(
+                                                fontSize: 18,
+                                                fontWeight: FontWeight.w600,
+                                            ),
+                                            
+                                            shape: RoundedRectangleBorder(
+                                                borderRadius: BorderRadius.circular(12), // Rounded corners
+                                                side: BorderSide(
+                                                    color: Color(0xFF675496), // Border color
+                                                    width: 2.0, // Border width
+                                                ),
+                                            ),
+                                            elevation: 8, // Shadow depth
+                                            shadowColor: Color(0xFF675496).withAlpha(76), // Colors.blue.withOpacity(0.3) -> 0.3 opacity ≈ 76 alpha (255 * 0.3),
+                                        ),
+                                        
+                                        child: Text(
+                                            'Save',
+                                            style: TextStyle(
+                                                fontSize: deviceWidth*0.05,
+                                                
+                                            ),
+                                        ),
+                                    ),
+                                ],
+                            ),
+                        ),
+
+                        // Total Quizzes Attempted
                     ],
                 ),
             ),
