@@ -236,7 +236,50 @@ class _ProfilePageState extends State<ProfilePage> {
                             ),
                         ),
 
+                        SizedBox(height: deviceHeight*0.03),
+
                         // Total Quizzes Attempted
+                        Padding(
+                            padding: EdgeInsets.symmetric(horizontal: deviceWidth * 0.05),
+
+                            child: Container(
+                                padding: const EdgeInsets.all(15),
+                                decoration: BoxDecoration(
+                                    color: Colors.grey.shade800,
+                                    borderRadius: BorderRadius.circular(12),
+                                    boxShadow: [
+                                        BoxShadow(
+                                            color: Colors.black12,
+                                            blurRadius: 5,
+                                            offset: Offset(0, 3) // Offset(dx, dy)
+                                        ),
+                                    ],
+                                ),
+
+                                child: Row(
+                                    children: [
+                                        const Icon(
+                                            Icons.assignment,
+                                            color: Colors.deepPurple,
+                                        ),
+
+                                        SizedBox(width: 10),
+
+                                        Text(
+                                            'Total Quizzes Attempted: $totalQuizPlayed',
+                                            style: TextStyle(
+                                                color: Colors.white,
+                                                fontSize: 16,
+                                                fontWeight: FontWeight.bold,
+                                            ),
+                                        ),
+                                    ],
+                                ),
+                            ),
+                        ),
+
+
+                        // Badges Earned
                     ],
                 ),
             ),
