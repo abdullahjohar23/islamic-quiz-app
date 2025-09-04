@@ -14,7 +14,7 @@ class ProfilePage extends StatelessWidget {
             body: SafeArea(
                 child: Column(
                     children: [
-                        // Top Purple Card
+                        // Top Purple Gradient Card
                         Container(
                             width: deviceWidth,
 
@@ -23,7 +23,7 @@ class ProfilePage extends StatelessWidget {
                                 horizontal: deviceWidth * 0.01,
                             ),
                             
-                            decoration: BoxDecoration(
+                            decoration: const BoxDecoration(
                                 gradient: LinearGradient(
                                     colors: [
                                         Color(0xFF2D0A57), // very dark purple
@@ -35,7 +35,8 @@ class ProfilePage extends StatelessWidget {
                                     begin: Alignment.topLeft,
                                     end: Alignment.bottomRight,
                                 ),
-                                borderRadius: const BorderRadius.only(
+                                
+                                borderRadius: BorderRadius.only(
                                     bottomLeft: Radius.circular(40),
                                     bottomRight: Radius.circular(40),
                                 ),
@@ -74,6 +75,7 @@ class ProfilePage extends StatelessWidget {
                                             Row(
                                                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                                                 children: [
+                                                    // Position
                                                     Text(
                                                         '#75',
                                                         style: TextStyle(
@@ -136,44 +138,7 @@ class ProfilePage extends StatelessWidget {
 
                         SizedBox(height: deviceHeight*0.05),
 
-                        // Info Boxes
-                        Padding(
-                            padding: EdgeInsets.symmetric(horizontal: deviceWidth * 0.08),
-                            child: Column(
-                                children: [
-                                    Container(
-                                        padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 12),
-                                        margin: const EdgeInsets.only(bottom: 15),
-                                        decoration: BoxDecoration(
-                                            border: Border.all(color: Colors.black54),
-                                            borderRadius: BorderRadius.circular(10),
-                                        ),
-                                        child: const Text(
-                                            "Name: ABDULLAH Johar",
-                                            style: TextStyle(
-                                                fontSize: 16,
-                                                fontWeight: FontWeight.w500
-                                            ),
-                                        ),
-                                    ),
-                                    
-                                    Container(
-                                        padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 12),
-                                        decoration: BoxDecoration(
-                                            border: Border.all(color: Colors.black54),
-                                            borderRadius: BorderRadius.circular(10),
-                                        ),
-                                        child: const Text(
-                                            "Age: 26",
-                                            style: TextStyle(
-                                                fontSize: 16,
-                                                fontWeight: FontWeight.w500
-                                            ),
-                                        ),
-                                    ),
-                                ],
-                            ),
-                        ),
+                        // Lower Profile Section
                     ],
                 ),
             ),
