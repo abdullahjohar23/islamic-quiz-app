@@ -8,6 +8,27 @@ class ProfilePage extends StatefulWidget {
 }
 
 class _ProfilePageState extends State<ProfilePage> {
+    late TextEditingController _nameController;
+    String userName = 'Abdullah Johar'; // sample for now
+    int totalQuizPlayed = 45; // sample for now
+
+    List<String> earnedBadges = [
+        "assets/images/badges/copper.png",
+        "assets/images/badges/amber.png",
+        "assets/images/badges/amethyst.png",
+    ];
+
+    @override
+    void initState() {
+        super.initState();
+        _nameController = TextEditingController(text: userName);
+    }
+
+    @override
+    void dispose() {
+        super.dispose();
+    }
+
     @override
     Widget build(BuildContext context) {
         double deviceWidth = MediaQuery.of(context).size.width;
@@ -144,6 +165,7 @@ class _ProfilePageState extends State<ProfilePage> {
                         SizedBox(height: deviceHeight*0.05),
 
                         // Lower Profile Section
+                        
                     ],
                 ),
             ),
