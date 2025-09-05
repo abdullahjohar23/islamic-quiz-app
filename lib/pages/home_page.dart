@@ -59,18 +59,18 @@ class _HomePageState extends State<HomePage> {
                                 Row(
                                     children: [
                                         Image.asset(
-                                            'assets/images/badges/amethyst.png',
+                                            'assets/images/badges/1_bronzite.png',
                                             height: deviceWidth*0.07,
                                         ),
             
                                         SizedBox(width: deviceWidth*0.01),
-                                        const Text('120', style: TextStyle(fontSize: 20, color: Color.fromARGB(255, 114, 35, 163), fontWeight: FontWeight.bold)),
+                                        const Text('0', style: TextStyle(fontSize: 20, color: Color.fromARGB(255, 114, 35, 163), fontWeight: FontWeight.bold)),
                                     ],
                                 ),
                             ],
                         ),
                     ),
-            
+
                     // Search Bar
                     Padding(
                         padding: EdgeInsets.symmetric(horizontal: deviceWidth*0.04, vertical: deviceWidth*0.05),
