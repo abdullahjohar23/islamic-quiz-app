@@ -13,9 +13,9 @@ class _ProfilePageState extends State<ProfilePage> {
     int totalQuizPlayed = 45; // sample for now
 
     List<String> earnedBadges = [
-        "assets/images/badges/copper.png",
-        "assets/images/badges/amber.png",
-        "assets/images/badges/amethyst.png",
+        'assets/images/badges/1_bronzite.png',
+        'assets/images/badges/2_amber.png',
+        'assets/images/badges/3_amethyst.png',
     ];
 
     @override
@@ -111,7 +111,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                                         ),
                                                     ),
 
-                                                    Image.asset('assets/images/badges/amethyst.png', height: deviceWidth*0.07),
+                                                    Image.asset('assets/images/badges/1_bronzite.png', height: deviceWidth*0.07),
 
                                                     Text(
                                                         '120',
