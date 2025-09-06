@@ -194,7 +194,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                         ),
                                     ),
 
-                                    SizedBox(width: 8), // gap between TextField and the Save Button
+                                    SizedBox(width: deviceWidth*0.02), // gap between Name TextField and the Save Button
 
                                     ElevatedButton(
                                         onPressed: () {
@@ -206,10 +206,10 @@ class _ProfilePageState extends State<ProfilePage> {
                                         style: ElevatedButton.styleFrom(
                                             backgroundColor: Color(0xFF675496), // Background color
                                             foregroundColor: Colors.white, // Text color
-                                            padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+                                            padding: EdgeInsets.symmetric(horizontal: deviceWidth*0.07, vertical: deviceHeight*0.02),
                                             
-                                            textStyle: const TextStyle(
-                                                fontSize: 18,
+                                            textStyle: TextStyle(
+                                                fontSize: deviceWidth*0.05,
                                                 fontWeight: FontWeight.w600,
                                             ),
                                             
@@ -228,7 +228,6 @@ class _ProfilePageState extends State<ProfilePage> {
                                             'Save',
                                             style: TextStyle(
                                                 fontSize: deviceWidth*0.05,
-                                                
                                             ),
                                         ),
                                     ),
@@ -245,11 +244,11 @@ class _ProfilePageState extends State<ProfilePage> {
                             child: Container(
                                 padding: const EdgeInsets.all(15),
                                 decoration: BoxDecoration(
-                                    color: Colors.grey.shade800,
+                                    color: const Color(0xFF675496),
                                     borderRadius: BorderRadius.circular(12),
                                     boxShadow: [
                                         BoxShadow(
-                                            color: Colors.black12,
+                                            color: Color(0xFF2D0A57),
                                             blurRadius: 5,
                                             offset: Offset(0, 3) // Offset(dx, dy)
                                         ),
@@ -258,9 +257,10 @@ class _ProfilePageState extends State<ProfilePage> {
 
                                 child: Row(
                                     children: [
-                                        const Icon(
+                                        Icon(
                                             Icons.assignment,
-                                            color: Colors.deepPurple,
+                                            color: Colors.white,
+                                            size: deviceWidth*0.065,
                                         ),
 
                                         SizedBox(width: 10),
@@ -269,7 +269,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                             'Total Quizzes Attempted: $totalQuizPlayed',
                                             style: TextStyle(
                                                 color: Colors.white,
-                                                fontSize: 16,
+                                                fontSize: deviceWidth*0.046,
                                                 fontWeight: FontWeight.bold,
                                             ),
                                         ),
@@ -277,7 +277,6 @@ class _ProfilePageState extends State<ProfilePage> {
                                 ),
                             ),
                         ),
-
 
                         // Badges Earned
                     ],
