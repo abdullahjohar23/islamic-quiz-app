@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:islamic_quiz_app/pages/quiz_card_design.dart';
+import 'package:islamic_quiz_app/pages/badge_information.dart';
 import 'package:islamic_quiz_app/pages/quiz_category_list.dart';
 
 class HomePage extends StatefulWidget {
@@ -11,6 +12,16 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
     late double deviceHeight, deviceWidth, topPadding;
+
+    String userName = 'Abdullah Johar'; // sample for now
+    int userScore = 1200; // sample for now
+    late BadgeInfo currentBadge;
+
+    @override
+    void initState() {
+        super.initState();
+        currentBadge = getCurrentBadge(userScore); // initialize current badge
+    }
 
     @override
     Widget build(BuildContext context) {
@@ -49,9 +60,12 @@ class _HomePageState extends State<HomePage> {
                                         
                                         SizedBox(width: deviceWidth*0.03),
                                         
-                                        const Text(
-                                            'Abdullah Johar',
-                                            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                                        Text(
+                                            userName.toUpperCase(),
+                                            style: TextStyle(
+                                                fontSize: 18,
+                                                fontWeight: FontWeight.bold
+                                            ),
                                         ),
                                     ],
                                 ),
@@ -59,12 +73,20 @@ class _HomePageState extends State<HomePage> {
                                 Row(
                                     children: [
                                         Image.asset(
-                                            'assets/images/badges/1_bronzite.png',
+                                            currentBadge.imagePath,
                                             height: deviceWidth*0.07,
                                         ),
             
                                         SizedBox(width: deviceWidth*0.01),
-                                        const Text('0', style: TextStyle(fontSize: 20, color: Color.fromARGB(255, 114, 35, 163), fontWeight: FontWeight.bold)),
+                                        
+                                        Text(
+                                            userScore.toString(),
+                                            style: TextStyle(
+                                                fontSize: 20,
+                                                color: Color.fromARGB(255, 114, 35, 163),
+                                                fontWeight: FontWeight.bold,
+                                            ),
+                                        ),
                                     ],
                                 ),
                             ],
