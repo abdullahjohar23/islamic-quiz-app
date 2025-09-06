@@ -12,12 +12,6 @@ class _ProfilePageState extends State<ProfilePage> {
     String userName = 'Abdullah Johar'; // sample for now
     int totalQuizPlayed = 45; // sample for now
 
-    List<String> earnedBadges = [
-        'assets/images/badges/1_bronzite.png',
-        'assets/images/badges/2_amber.png',
-        'assets/images/badges/3_amethyst.png',
-    ];
-
     @override
     void initState() {
         super.initState();
