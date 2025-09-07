@@ -188,7 +188,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                             ),
                                         ),
 
-                                        SizedBox(width: deviceWidth * 0.02),
+                                        SizedBox(width: deviceWidth * 0.02), // gap between TextField and the Save Button
                                         
                                         ElevatedButton(
                                             onPressed: () {
@@ -200,9 +200,10 @@ class _ProfilePageState extends State<ProfilePage> {
                                             style: ElevatedButton.styleFrom(
                                                 backgroundColor: Color(0xFF675496),
                                                 foregroundColor: Colors.white,
+                                                
                                                 padding: EdgeInsets.symmetric(
                                                     horizontal: deviceWidth * 0.07,
-                                                    vertical: deviceHeight * 0.02
+                                                    vertical: deviceHeight * 0.018
                                                 ),
                                                 
                                                 shape: RoundedRectangleBorder(
@@ -216,6 +217,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                                 'Save',
                                                 style: TextStyle(
                                                     fontSize: deviceWidth * 0.05,
+                                                    color: Colors.white,
                                                 ),
                                             ),
                                         ),
