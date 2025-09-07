@@ -75,7 +75,7 @@ final List<BadgeInfo> badges = [
     
     BadgeInfo(
         name: 'Black Opal',
-        imagePath: 'assets/images/badges/8_black_opal.png',
+        imagePath: 'assets/images/badges/8_blackopal.png',
         minScore: 3000,
         maxScore: 3999,
         color: Colors.black,
