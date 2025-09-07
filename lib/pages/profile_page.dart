@@ -105,21 +105,21 @@ class _ProfilePageState extends State<ProfilePage> {
                                                     userRank.toString(),
                                                     style: TextStyle(
                                                         color: Colors.white,
-                                                        fontSize: deviceWidth * 0.04,
+                                                        fontSize: deviceWidth * 0.055,
                                                         fontWeight: FontWeight.bold
                                                     ),
                                                 ),
                                                 
                                                 Image.asset(
                                                     currentBadge.imagePath,
-                                                    height: deviceWidth * 0.07
+                                                    height: deviceWidth * 0.1
                                                 ),
 
                                                 Text(
                                                     userScore.toString(),
                                                     style: TextStyle(
                                                         color: Colors.white,
-                                                        fontSize: deviceWidth * 0.04,
+                                                        fontSize: deviceWidth * 0.055,
                                                         fontWeight: FontWeight.bold
                                                     ),
                                                 ),
@@ -131,12 +131,12 @@ class _ProfilePageState extends State<ProfilePage> {
                                         // Text Labels (Position, Badge, Score)
                                         Row(
                                             mainAxisAlignment: MainAxisAlignment.spaceAround,
-                                            children: const [
+                                            children: [
                                                 Text(
                                                     'Position',
                                                     style: TextStyle(
                                                         color: Colors.white,
-                                                        fontSize: 14,
+                                                        fontSize: deviceWidth * 0.045,
                                                     ),
                                                 ),
                                                 
@@ -144,7 +144,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                                     'Amethyst',
                                                     style: TextStyle(
                                                         color: Colors.white,
-                                                        fontSize: 14,
+                                                        fontSize: deviceWidth * 0.045,
                                                     ),
                                                 ),
                                                 
@@ -152,7 +152,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                                     'SCORE',
                                                     style: TextStyle(
                                                         color: Colors.white,
-                                                        fontSize: 14,
+                                                        fontSize: deviceWidth * 0.045,
                                                     ),
                                                 ),
                                             ],
