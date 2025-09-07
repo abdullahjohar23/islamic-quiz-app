@@ -14,7 +14,7 @@ class _ProfilePageState extends State<ProfilePage> {
     
     String userName = 'Abdullah Johar'; // sample for now
     int userRank = 74;
-    int userScore = 1200; // sample for now
+    int userScore = 50; // sample for now
     int totalQuizPlayed = 45; // sample for now
     late BadgeInfo currentBadge;
 
@@ -267,21 +267,21 @@ class _ProfilePageState extends State<ProfilePage> {
                             Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                    const Padding(
-                                        padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                                    Padding(
+                                        padding: EdgeInsets.only(left: deviceWidth * 0.06, bottom: deviceHeight * 0.02),
                                         child: Text(
                                             'Badges Earned',
                                             style: TextStyle(
-                                                fontSize: 16,
+                                                color: Color(0xFF675496),
+                                                fontSize: deviceWidth*0.048,
                                                 fontWeight: FontWeight.bold,
-                                                color: Colors.purple,
                                             ),
                                         ),
                                     ),
 
                                     // ✅ Scroll-safe Grid
                                     Padding(
-                                        padding: const EdgeInsets.symmetric(horizontal: 12),
+                                        padding: EdgeInsets.symmetric(horizontal: deviceWidth*0.048),
                                         child: GridView.builder(
                                             shrinkWrap: true,
                                             physics: const NeverScrollableScrollPhysics(),
