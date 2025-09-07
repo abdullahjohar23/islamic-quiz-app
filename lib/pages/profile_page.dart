@@ -265,8 +265,9 @@ class _ProfilePageState extends State<ProfilePage> {
 
                             //* Badges Earned
                             Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
+                                crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
+                                    // Badges Earned Label
                                     Padding(
                                         padding: EdgeInsets.only(left: deviceWidth * 0.06, bottom: deviceHeight * 0.02),
                                         child: Text(
@@ -279,9 +280,9 @@ class _ProfilePageState extends State<ProfilePage> {
                                         ),
                                     ),
 
-                                    // ✅ Scroll-safe Grid
+                                    // Badges Display
                                     Padding(
-                                        padding: EdgeInsets.symmetric(horizontal: deviceWidth*0.048),
+                                        padding: EdgeInsets.only(right: deviceWidth*0.048, left: deviceWidth*0.048, bottom: deviceWidth*0.06),
                                         child: GridView.builder(
                                             shrinkWrap: true,
                                             physics: const NeverScrollableScrollPhysics(),
