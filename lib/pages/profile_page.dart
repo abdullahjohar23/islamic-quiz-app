@@ -141,7 +141,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                                 ),
                                                 
                                                 Text(
-                                                    'Amethyst',
+                                                    currentBadge.name,
                                                     style: TextStyle(
                                                         color: Colors.white,
                                                         fontSize: deviceWidth * 0.045,
