@@ -14,9 +14,11 @@ class _ProfilePageState extends State<ProfilePage> {
     
     String userName = 'Abdullah Johar'; // sample for now
     int userRank = 74;
-    int userScore = 50; // sample for now
+    int userScore = 0; // sample for now
     int totalQuizPlayed = 45; // sample for now
     late BadgeInfo currentBadge;
+
+    final filteredBadges = badges.sublist(1); // create new list without first item to skip displaying the no badge
 
     @override
     void initState() {
@@ -294,10 +296,11 @@ class _ProfilePageState extends State<ProfilePage> {
                                                 childAspectRatio: 0.9,
                                             ),
                                             
-                                            itemCount: badges.length,
+                                            itemCount: filteredBadges.length,
+                                            
                                             itemBuilder: (context, index) {
                                                 return BadgeCard(
-                                                    badge: badges[index],
+                                                    badge: filteredBadges[index],
                                                     userScore: userScore,
                                                 );
                                             },
