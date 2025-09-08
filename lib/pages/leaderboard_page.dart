@@ -13,7 +13,7 @@ class _LeaderboardPageState extends State<LeaderboardPage> {
         return Scaffold(
             body: Center(
                 child: Text(
-                    'This is the Quran Page',
+                    'This is the Leaderboard Page',
                     style: TextStyle(
                         fontSize: 25,
                         color: Colors.deepPurple,

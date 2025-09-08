@@ -13,7 +13,7 @@ class _GamesPageState extends State<GamesPage> {
         return Scaffold(
             body: Center(
                 child: Text(
-                    'This is the Contest Page',
+                    'This is the Game Page',
                     style: TextStyle(
                         fontSize: 25,
                         color: Colors.deepPurple,
