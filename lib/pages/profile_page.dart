@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:islamic_quiz_app/pages/badge_card_design.dart';
-import 'package:islamic_quiz_app/pages/badge_information.dart';
+import 'package:islamic_quiz_app/badge_related/badge_card_design.dart';
+import 'package:islamic_quiz_app/badge_related/badge_information.dart';
 
 class ProfilePage extends StatefulWidget {
     const ProfilePage({super.key});

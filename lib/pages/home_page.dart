@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:islamic_quiz_app/pages/quiz_card_design.dart';
-import 'package:islamic_quiz_app/pages/badge_information.dart';
-import 'package:islamic_quiz_app/pages/quiz_category_list.dart';
+import 'package:islamic_quiz_app/quiz_related/quiz_card_design.dart';
+import 'package:islamic_quiz_app/badge_related/badge_information.dart';
+import 'package:islamic_quiz_app/quiz_related/quiz_category_list.dart';
 
 class HomePage extends StatefulWidget {
     const HomePage({super.key});
