@@ -41,7 +41,7 @@ class _MainPageState extends State<MainPage> {
         BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
         BottomNavigationBarItem(icon: Icon(Icons.menu_book), label: 'Quran'),
         BottomNavigationBarItem(icon: Icon(Icons.emoji_events), label: 'Leaderborad'),
-        BottomNavigationBarItem(icon: Icon(Icons.bolt), label: 'Contest'),
+        BottomNavigationBarItem(icon: Icon(Icons.quiz), label: 'Games'),
         BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
     ];
 
