@@ -18,6 +18,14 @@ class BadgeInfo {
 
 final List<BadgeInfo> badges = [
     BadgeInfo(
+        name: 'No Badge',
+        imagePath: 'assets/images/badges/nothing.png',
+        minScore: 0,
+        maxScore: 0,
+        color: Colors.black54,
+    ),
+
+    BadgeInfo(
         name: 'Bronzite',
         imagePath: 'assets/images/badges/1_bronzite.png',
         minScore: 1,
