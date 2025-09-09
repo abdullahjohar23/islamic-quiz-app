@@ -14,7 +14,7 @@ class _HomePageState extends State<HomePage> {
     late double deviceHeight, deviceWidth, topPadding;
 
     String userName = 'Abdullah Johar'; // sample for now
-    int userScore = 1200; // sample for now
+    int userScore = 0; // sample for now
     late BadgeInfo currentBadge;
 
     @override
