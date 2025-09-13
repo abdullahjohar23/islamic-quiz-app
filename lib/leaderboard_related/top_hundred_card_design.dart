@@ -1,5 +1,6 @@
 import 'dummy_users.dart';
 import 'package:flutter/material.dart';
+import 'package:islamic_quiz_app/badge_related/badge_information.dart';
 
 class TopHundredCard extends StatelessWidget {
     final UserInfoModel user;
@@ -14,6 +15,9 @@ class TopHundredCard extends StatelessWidget {
     @override
     Widget build(BuildContext context) {
         double deviceWidth = MediaQuery.of(context).size.width;
+
+        // Get badge info from score
+        final badge = getCurrentBadge(user.score);
 
         return Card(
             elevation: 2,
@@ -58,10 +62,10 @@ class TopHundredCard extends StatelessWidget {
                                 
                                 const SizedBox(width: 6),
                                 
-                                Icon(
-                                    Icons.diamond,
-                                    color: Colors.blueAccent,
-                                    size: 18,
+                                Image.asset(
+                                    badge.imagePath,
+                                    width: 20,
+                                    height: 20,
                                 ),
                             ],
                         ),
