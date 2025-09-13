@@ -1,5 +1,6 @@
-import 'package:flutter/material.dart';
 import 'dummy_users.dart';
+import 'package:flutter/material.dart';
+import 'package:islamic_quiz_app/badge_related/badge_information.dart';
 
 class TopThreeCard extends StatelessWidget {
     final UserInfoModel user;
@@ -17,6 +18,9 @@ class TopThreeCard extends StatelessWidget {
     Widget build(BuildContext context) {
         double deviceWidth = MediaQuery.of(context).size.width;
         // double deviceHeight = MediaQuery.of(context).size.height;
+
+        // Get badge info from score
+        final badge = getCurrentBadge(user.score);
 
         return Container(
             width: deviceWidth * 0.3,
@@ -81,10 +85,10 @@ class TopThreeCard extends StatelessWidget {
                             
                             const SizedBox(width: 6),
 
-                            Icon(
-                                Icons.diamond,
-                                color: Colors.blueAccent,
-                                size: 18,
+                            Image.asset(
+                                badge.imagePath,
+                                width: 20,
+                                height: 20,
                             ),
                         ],
                     ),
