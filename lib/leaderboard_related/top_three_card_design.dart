@@ -17,7 +17,7 @@ class TopThreeCard extends StatelessWidget {
     @override
     Widget build(BuildContext context) {
         double deviceWidth = MediaQuery.of(context).size.width;
-        // double deviceHeight = MediaQuery.of(context).size.height;
+        double deviceHeight = MediaQuery.of(context).size.height;
 
         // Get badge info from score
         final badge = getCurrentBadge(user.score);
@@ -41,23 +41,25 @@ class TopThreeCard extends StatelessWidget {
             
             child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
-                // crossAxisAlignment: CrossAxisAlignment.start,
-
                 children: [
                     CircleAvatar(
-                        radius: deviceWidth * 0.09,
+                        radius: deviceWidth * 0.07,
                         backgroundColor: Colors.grey[300],
-                        child: const Icon(Icons.person, size: 40, color: Colors.black54),
+                        child: Icon(
+                            Icons.person,
+                            size: deviceWidth*0.08,
+                            color: Colors.black54,
+                        ),
                     ),
                 
-                    const SizedBox(height: 8),
+                    SizedBox(height: deviceHeight * 0.018),
 
                     // Name
                     Text(
                         user.name,
                         style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: deviceWidth * 0.04,
+                            fontWeight: FontWeight.bold,
+                            fontSize: deviceWidth * 0.04,
                         ),
                     ),
 
@@ -65,9 +67,9 @@ class TopThreeCard extends StatelessWidget {
                     Text(
                         "$rank",
                         style: TextStyle(
-                        fontSize: deviceWidth * 0.045,
-                        fontWeight: FontWeight.w600,
-                        color: Colors.deepPurple,
+                            fontSize: deviceWidth * 0.045,
+                            fontWeight: FontWeight.w600,
+                            color: Colors.deepPurple,
                         ),
                     ),
 
@@ -83,12 +85,12 @@ class TopThreeCard extends StatelessWidget {
                                 ),
                             ),
                             
-                            const SizedBox(width: 6),
+                            SizedBox(width: deviceWidth * 0.02),
 
                             Image.asset(
                                 badge.imagePath,
-                                width: 20,
-                                height: 20,
+                                width: deviceWidth*0.047,
+                                height: deviceWidth*0.047,
                             ),
                         ],
                     ),
