@@ -25,7 +25,6 @@ class TopThreeCard extends StatelessWidget {
         return Container(
             width: deviceWidth * 0.3,
             height: deviceWidth * heightFactor,
-            padding: EdgeInsets.only(top: 5),
             
             decoration: BoxDecoration(
                 color: Colors.white,
