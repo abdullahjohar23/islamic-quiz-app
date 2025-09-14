@@ -15,17 +15,18 @@ class TopHundredCard extends StatelessWidget {
     @override
     Widget build(BuildContext context) {
         double deviceWidth = MediaQuery.of(context).size.width;
+        double deviceHeight = MediaQuery.of(context).size.height;
 
         // Get badge info from score
         final badge = getCurrentBadge(user.score);
 
         return Card(
             elevation: 2,
-            margin: const EdgeInsets.symmetric(vertical: 6, horizontal: 12),
+            margin: EdgeInsets.symmetric(horizontal: deviceWidth*0.035, vertical: deviceHeight*0.006), // gaps outside the card
             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
             
             child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+                padding: EdgeInsets.symmetric(horizontal: deviceWidth*0.04, vertical: deviceHeight*0.013), // gaps inside the card
                 child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -34,10 +35,14 @@ class TopHundredCard extends StatelessWidget {
                             children: [
                                 CircleAvatar(
                                     backgroundColor: Colors.grey[300],
-                                    child: const Icon(Icons.person, color: Colors.black54),
+                                    child: Icon(
+                                        Icons.person,
+                                        size: deviceWidth*0.07,
+                                        color: Colors.black54,
+                                    ),
                                 ),
                                 
-                                const SizedBox(width: 10),
+                                SizedBox(width: deviceWidth * 0.03), // gap between 'icon' and 'rank. name'
                                 
                                 Text(
                                     "$rank. ${user.name}",
@@ -60,12 +65,12 @@ class TopHundredCard extends StatelessWidget {
                                     ),
                                 ),
                                 
-                                const SizedBox(width: 6),
+                                SizedBox(width: deviceWidth * 0.03), // gap between 'score' and 'badge'
                                 
                                 Image.asset(
                                     badge.imagePath,
-                                    width: 20,
-                                    height: 20,
+                                    width: deviceWidth*0.047,
+                                    height: deviceWidth*0.047,
                                 ),
                             ],
                         ),
