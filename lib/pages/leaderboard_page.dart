@@ -9,6 +9,7 @@ class LeaderboardPage extends StatelessWidget {
     @override
     Widget build(BuildContext context) {
         double deviceWidth = MediaQuery.of(context).size.width;
+        double deviceHeight = MediaQuery.of(context).size.height;
 
         // Sort users by score in descending order (highest first)
         final sortedUsers = [...dummyUsers]..sort((a, b) => b.score.compareTo(a.score));
@@ -20,18 +21,19 @@ class LeaderboardPage extends StatelessWidget {
                     Container(
                         // design
                         width: double.infinity,
-                        padding: const EdgeInsets.symmetric(vertical: 80),
+                        padding: EdgeInsets.symmetric(vertical: deviceHeight * 0.07),
                         decoration: const BoxDecoration(
                             gradient: LinearGradient(
                                 colors: [
-                                Color(0xFF2D0A57),
-                                Color(0xFF675496),
-                                Color(0xFF675496),
-                                Color(0xFFE0A8FF),
+                                    Color(0xFF2D0A57),
+                                    Color(0xFF675496),
+                                    Color(0xFF675496),
+                                    Color(0xFFE0A8FF),
                                 ],
                                 begin: Alignment.topLeft,
                                 end: Alignment.bottomRight,
                             ),
+                            
                             borderRadius: BorderRadius.only(
                                 bottomLeft: Radius.circular(30),
                                 bottomRight: Radius.circular(30),
@@ -44,13 +46,13 @@ class LeaderboardPage extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.end,
                             children: [
                                 TopThreeCard(user: sortedUsers[1], rank: 2, heightFactor: 0.45),
-                                TopThreeCard(user: sortedUsers[0], rank: 1, heightFactor: 0.55),
-                                TopThreeCard(user: sortedUsers[2], rank: 3, heightFactor: 0.40),
+                                TopThreeCard(user: sortedUsers[0], rank: 1, heightFactor: 0.52),
+                                TopThreeCard(user: sortedUsers[2], rank: 3, heightFactor: 0.42),
                             ],
                         ),
                     ),
 
-                    const SizedBox(height: 20),
+                    SizedBox(height: deviceHeight*0.02),
 
                     // "Top 100" Section Title
                     Padding(
@@ -65,7 +67,8 @@ class LeaderboardPage extends StatelessWidget {
                         ),
                     ),
 
-                    const SizedBox(height: 10),
+                    SizedBox(height: deviceHeight*0.02),
+
 
                     // Expanded List for Ranks 4–100
                     Expanded(
