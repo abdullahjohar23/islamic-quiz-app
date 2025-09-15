@@ -69,7 +69,6 @@ class LeaderboardPage extends StatelessWidget {
 
                     SizedBox(height: deviceHeight*0.02),
 
-
                     // Expanded List for Ranks 4–100
                     Expanded(
                         child: ListView.builder(
