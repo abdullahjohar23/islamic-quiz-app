@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'package:islamic_quiz_app/pages/games.dart';
+import 'package:islamic_quiz_app/pages/trivia_game.dart';
 import 'package:islamic_quiz_app/pages/home_page.dart';
 import 'package:islamic_quiz_app/pages/quran_page.dart';
 import 'package:islamic_quiz_app/pages/profile_page.dart';
@@ -33,7 +33,7 @@ class _MainPageState extends State<MainPage> {
         HomePage(), // index 0
         QuranPage(),
         LeaderboardPage(),
-        GamesPage(),
+        TriviaGamesPage(),
         ProfilePage(),
     ];
 
