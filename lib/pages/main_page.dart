@@ -1,10 +1,10 @@
 
 import 'package:flutter/material.dart';
-import 'package:islamic_quiz_app/pages/trivia_game.dart';
 import 'package:islamic_quiz_app/pages/home_page.dart';
 import 'package:islamic_quiz_app/pages/quran_page.dart';
 import 'package:islamic_quiz_app/pages/profile_page.dart';
 import 'package:islamic_quiz_app/pages/leaderboard_page.dart';
+import 'package:islamic_quiz_app/pages/trivia_game_page.dart';
 
 class MainPage extends StatefulWidget {
     const MainPage({super.key});
@@ -33,7 +33,7 @@ class _MainPageState extends State<MainPage> {
         HomePage(), // index 0
         QuranPage(),
         LeaderboardPage(),
-        TriviaGamesPage(),
+        TriviaGamePage(),
         ProfilePage(),
     ];
 
