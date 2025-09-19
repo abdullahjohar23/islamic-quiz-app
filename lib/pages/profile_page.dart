@@ -40,6 +40,7 @@ class _ProfilePageState extends State<ProfilePage> {
 
         return Scaffold(
             backgroundColor: Colors.white,
+            
             body: SafeArea(
                 child: SingleChildScrollView(
                     scrollDirection: Axis.vertical, // it's by default vertical

@@ -15,6 +15,8 @@ class LeaderboardPage extends StatelessWidget {
         final sortedUsers = [...dummyUsers]..sort((a, b) => b.score.compareTo(a.score));
 
         return Scaffold(
+            backgroundColor: Colors.white,
+            
             body: Column(
                 children: [
                     // Top 3 Section

@@ -99,6 +99,8 @@ class _TriviaGamePageState extends State<TriviaGamePage> with SingleTickerProvid
         final currentQA = shuffledQuestions[currentIndex];
 
         return Scaffold(
+            backgroundColor: Colors.white,
+            
             appBar: AppBar(
                 backgroundColor: Color(0xFF675496),
                 foregroundColor: Colors.white,

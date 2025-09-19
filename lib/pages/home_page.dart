@@ -37,6 +37,8 @@ class _HomePageState extends State<HomePage> {
         }
 
         return Scaffold(
+            backgroundColor: Colors.white,
+            
             body: Column(
                 children: [
                     // Header with profile & points
