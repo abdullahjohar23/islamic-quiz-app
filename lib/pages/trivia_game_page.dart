@@ -40,7 +40,7 @@ class _TriviaGamePageState extends State<TriviaGamePage> with SingleTickerProvid
 
     // Start Time Function
     void _startTimer() {
-        timeLeft = 5;
+        timeLeft = 7;
         showAnswer = false;
         gameStarted = true;
 
@@ -179,7 +179,7 @@ class _TriviaGamePageState extends State<TriviaGamePage> with SingleTickerProvid
                                                                 isBack ? '✅ ${currentQA[1]}' : currentQA[0],
                                                                 textAlign: TextAlign.center,
                                                                 style: TextStyle(
-                                                                    fontSize: deviceWidth * 0.06,
+                                                                    fontSize: deviceWidth * 0.05,
                                                                     fontWeight: FontWeight.w600,
                                                                     color: isBack ? Colors.green[900] : Colors.black87,
                                                                 ),
