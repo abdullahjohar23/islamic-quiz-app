@@ -23,6 +23,7 @@ flutter:
     assets:
         - assets/images/badges/
         - assets/images/quizbg/
+        - assets/images/timers/
 
     fonts:
         - family: Caprasimo
