@@ -89,12 +89,12 @@ class _TriviaGamePageState extends State<TriviaGamePage> with SingleTickerProvid
     }
 
     void _nextQuestion() {
-        controller.reset();
+        controller.reset(); // Ensure animation is reset
         timer?.cancel();
 
         setState(() {
             currentIndex = (currentIndex + 1) % shuffledQuestions.length;
-            showAnswer = false;
+            showAnswer = false; // Always start with question
             answerRevealed = false;
             timeLeft = 7;
             canFlip = playWithTimer ? false : true;
@@ -112,7 +112,12 @@ class _TriviaGamePageState extends State<TriviaGamePage> with SingleTickerProvid
             currentIndex = 0;
             shuffledQuestions.shuffle();
             canFlip = withTimer ? false : true;
+            showAnswer = false; // Reset to show question first
+            answerRevealed = false; // Reset answer revealed state
         });
+
+        // Reset animation to question side
+        controller.reset();
 
         if (withTimer) _startTimer();
     }
@@ -121,7 +126,12 @@ class _TriviaGamePageState extends State<TriviaGamePage> with SingleTickerProvid
         setState(() {
             gameStarted = false;
             timer?.cancel();
+            showAnswer = false; // Reset to question for next game
+            answerRevealed = false; // Reset answer revealed state
         });
+        
+        // Reset animation to question side
+        controller.reset();
     }
 
     @override
