@@ -361,22 +361,22 @@ class _TriviaGamePageState extends State<TriviaGamePage> with SingleTickerProvid
                             width: double.infinity,
                             padding: EdgeInsets.all(deviceWidth*0.027),
                             decoration: const BoxDecoration(
-                            gradient: LinearGradient(
-                                colors: [
-                                    Color(0xFF2D0A57),
-                                    Color(0xFF675496),
-                                    Color(0xFF675496),
-                                    Color(0xFF916AA6),
-                                ],
-                                begin: Alignment.topLeft,
-                                end: Alignment.bottomRight,
+                                gradient: LinearGradient(
+                                    colors: [
+                                        Color(0xFF2D0A57),
+                                        Color(0xFF675496),
+                                        Color(0xFF675496),
+                                        Color(0xFF916AA6),
+                                    ],
+                                    begin: Alignment.topLeft,
+                                    end: Alignment.bottomRight,
+                                ),
+                                
+                                borderRadius: BorderRadius.only(
+                                    bottomLeft: Radius.circular(16),
+                                    bottomRight: Radius.circular(16),
+                                ),
                             ),
-                            
-                            borderRadius: BorderRadius.only(
-                                bottomLeft: Radius.circular(16),
-                                bottomRight: Radius.circular(16),
-                            ),
-                        ),
                             
                             child: Text(
                                 text,
