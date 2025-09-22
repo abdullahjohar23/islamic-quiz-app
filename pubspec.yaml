@@ -16,6 +16,8 @@ dev_dependencies:
     flutter_test:
         sdk: flutter
     flutter_lints: ^5.0.0
+    flutter_launcher_icons: ^0.14.4
+    flutter_native_splash: ^2.4.6
 
 flutter:
     uses-material-design: true
@@ -24,6 +26,7 @@ flutter:
         - assets/images/badges/
         - assets/images/quizbg/
         - assets/images/timers/
+        - assets/images/logos/
 
     fonts:
         - family: Caprasimo
@@ -41,3 +44,20 @@ flutter:
         - family: Archivo_Black
           fonts:
               - asset: assets/fonts/Archivo_Black/ArchivoBlack-Regular.ttf
+
+flutter_native_splash:
+    color: "#ffffff"
+    image: "assets/images/logos/splashlogo.png"
+    android: true
+    ios: false
+    fullscreen: true
+    
+    android_12:
+        icon_background_color: "#ffffff"
+        image: "assets/images/logos/splashlogo.png"
+        fullscreen: false
+
+flutter_launcher_icons:
+    android: true
+    ios: false
+    image_path: "assets/images/logos/iconlogo.png"
