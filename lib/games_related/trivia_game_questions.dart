@@ -1,5 +1,5 @@
 final List<List<String>> questionAnswer = [
-    ["Who companion is known as 'Dhun-Noorayn'?", "Uthman ibn Affan (Ra)"],
+    ["Which companion is known as 'Dhun-Noorayn'?", "Uthman ibn Affan (Ra)"],
     ["Which prophet was swallowed by a big fish?", "Yunus (As)"],
     ["Name a surah that has only 3 verses?", "Surah Al-Kawthar, An Nasr, Al A'sr"],
     ["What is the first word revealed in the Qur'an?", "Iqra (Read)"],
